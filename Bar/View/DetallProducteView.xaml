@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bar.View.DetallProducteView">
+    
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Id: "></Label>
+            <Entry Grid.Row="0" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.Id}"></Entry>
+            <Label Grid.Row="1" Grid.Column="0" Text="Nom: "></Label>
+            <Entry Grid.Row="1" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.Nom}"></Entry>
+            <Label Grid.Row="2" Grid.Column="0" Text="Descripcio: "></Label>
+            <Entry Grid.Row="2" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.Descripcio}"></Entry>
+            <Label Grid.Row="3" Grid.Column="0" Text="PVP: "></Label>
+            <Entry Grid.Row="3" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.PVP}"></Entry>
+            <Label Grid.Row="4" Grid.Column="0" Text="Alergens: "></Label>
+            <Entry Grid.Row="4" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.Alergens}"></Entry>
+            <Label Grid.Row="5" Grid.Column="0" Text="Carta: "></Label>
+            <Entry Grid.Row="5" Grid.Column="1" Margin="0.1" Text="{Binding ProducteDetall.Carta.Etiqueta}"></Entry>
+            <Picker Grid.Row="5" Grid.Column="1" ItemsSource="{Binding Cartes}" ItemDisplayBinding="{Binding Etiqueta}"></Picker>
+        </Grid>
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Nou" Clicked="ClickedNou" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Esborra" Clicked="ClickedEsborra" HorizontalOptions="FillAndExpand"></Button>
+            <Button Text="Desa" Clicked="ClickedDesa" HorizontalOptions="FillAndExpand"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
